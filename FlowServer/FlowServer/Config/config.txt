@@ -1,0 +1,3 @@
+﻿{
+    "MySql": "host=192.168.2.104;port=3306;user id=root;password=lft8306488;database=test;"
+}
