@@ -1,0 +1,27 @@
+{
+  "name": "flow",
+  "version": "0.0.1",
+  "description": "flow font-end",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --ui qunit --compilers js:babel-core/register",
+    "lint": "eslint index.js"
+  },
+  "keywords": [
+    "flow"
+  ],
+  "author": "jaren",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "vue": "^2.4.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-eslint": "^7.2.3",
+    "babel-preset-latest": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "eslint": "^4.4.1"
+  }
+}
