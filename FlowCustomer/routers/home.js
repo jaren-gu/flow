@@ -17,13 +17,17 @@ let view = async (url,next) => {
 
 
 router.get('/', async(ctx) => {
-    console.log(ctx.request.url);
     let html = await view(ctx.request.url);
     ctx.body = html;
 })
 
 .get('login', async(ctx) => {
-    ctx.body = 'login';
+    let html = await view(ctx.request.url);
+    ctx.body = html;
+})
+
+.post('login',async(ctx) => {
+    ctx.body = ctx.request.body;
 })
 
 .get('404', async(ctx) => {

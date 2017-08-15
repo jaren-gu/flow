@@ -1,5 +1,6 @@
 const fs = require('fs');
 const Koa = require('koa');
+const bodyParser = require('koa-bodyparser')
 
 let router = require('./routers/index')
 
@@ -16,6 +17,9 @@ app.on('error', function (err, ctx) {
     console.log(err);
     console.log(ctx);
 });
+
+// 使用ctx.body解析中间件
+app.use(bodyParser())
 
 // 加载路由中间件
 app.use(router.routes()).use(router.allowedMethods())
