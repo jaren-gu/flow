@@ -1,5 +1,6 @@
 const Router = require('koa-router');
-const fs = require('fs');
+
+let fileReader = require('../utils/fileReader');
 
 let router = new Router();
 
@@ -14,17 +15,6 @@ let view = async (url,next) => {
     return html;
 }
 
-let fileReader = async (filePath,next) => {
-    return new Promise(( resolve, reject ) => {
-        fs.readFile(filePath, "binary", ( err, data ) => {
-          if ( err ) {
-            reject( err )
-          } else {
-            resolve( data )
-          }
-        })
-      })
-}
 
 router.get('/', async(ctx) => {
     console.log(ctx.request.url);
