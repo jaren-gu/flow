@@ -1,0 +1,20 @@
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.deps.json
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.runtimeconfig.json
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.runtimeconfig.dev.json
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.dll
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.pdb
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.csprojResolveAssemblyReference.cache
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.csproj.CoreCompileInputs.cache
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.AssemblyInfo.cs
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.dll
+F:\CodeProject\ASP.NET MVC\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.pdb
+F:\CodeProject\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.deps.json
+F:\CodeProject\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.runtimeconfig.json
+F:\CodeProject\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.runtimeconfig.dev.json
+F:\CodeProject\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.dll
+F:\CodeProject\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.pdb
+F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.csprojResolveAssemblyReference.cache
+F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.csproj.CoreCompileInputs.cache
+F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.AssemblyInfo.cs
+F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.dll
+F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.pdb

@@ -1,24 +1,21 @@
-﻿using System;
-using FlowServer.Helper;
+﻿using System.IO;
+using Microsoft.AspNetCore.Hosting;
 
 namespace FlowServer
 {
-    class Program
+    public class Program
     {
-
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            using (var mysql = new MySqlDbHelper())
-            {
-                mysql.Connection.Open();
-                LogHelper.Info("MySql is connect!");
-            }
+            var host = new WebHostBuilder()
+                .UseKestrel()
+                .UseContentRoot(Directory.GetCurrentDirectory())
+                .UseIISIntegration()
+                .UseStartup<Startup>()
+                .UseApplicationInsights()
+                .Build();
 
-            LogHelper.Info("info");
-            LogHelper.Debug("debug");
-            LogHelper.Error("error");
-            LogHelper.Warn("warn");
-            Console.ReadKey();
+            host.Run();
         }
     }
 }
