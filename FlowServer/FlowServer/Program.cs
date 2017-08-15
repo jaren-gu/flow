@@ -5,6 +5,7 @@ namespace FlowServer
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             using (var mysql = new MySqlDbHelper())
