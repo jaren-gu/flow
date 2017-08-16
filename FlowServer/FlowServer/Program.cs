@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using Microsoft.AspNetCore.Hosting;
+using FlowServer.Helper;
 
 namespace FlowServer
 {
@@ -14,7 +15,7 @@ namespace FlowServer
                 .UseStartup<Startup>()
                 .UseApplicationInsights()
                 .Build();
-
+            LogHelper.Info("服务开启！！！！！");
             host.Run();
         }
     }

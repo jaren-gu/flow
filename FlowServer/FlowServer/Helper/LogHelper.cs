@@ -7,6 +7,9 @@ using System.IO;
 
 namespace FlowServer.Helper
 {
+    /// <summary>
+    /// 日志工具类
+    /// </summary>
     public class LogHelper
     {
         /// <summary>
@@ -44,13 +47,13 @@ namespace FlowServer.Helper
 
         private static string GetStackInfo(Exception exception = null)
         {
-            System.Diagnostics.StackTrace st = new System.Diagnostics.StackTrace(exception, true);
-            System.Diagnostics.StackFrame[] sfs = st.GetFrames();
+            StackTrace st = new StackTrace();
+            StackFrame[] sfs = st.GetFrames();
             int i = -1;
             string CallFun = "";
             foreach (StackFrame sf in sfs)
             {
-                if (System.Diagnostics.StackFrame.OFFSET_UNKNOWN == sf.GetILOffset()) break;
+                if (StackFrame.OFFSET_UNKNOWN == sf.GetILOffset()) break;
                 Type callType = sf.GetMethod().DeclaringType;
                 if (callType == typeof(LogHelper)) { i = 0; continue; }
                 if (i < 0) continue;

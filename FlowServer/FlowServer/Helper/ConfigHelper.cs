@@ -3,6 +3,9 @@ using System.IO;
 
 namespace FlowServer.Helper
 {
+    /// <summary>
+    /// 配置工具类
+    /// </summary>
     public class ConfigHelper
     {
         /// <summary>
