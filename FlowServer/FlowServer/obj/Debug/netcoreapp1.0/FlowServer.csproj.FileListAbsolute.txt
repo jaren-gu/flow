@@ -1,0 +1,9 @@
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.0\FlowServer.deps.json
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.0\FlowServer.runtimeconfig.json
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.0\FlowServer.runtimeconfig.dev.json
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.0\FlowServer.dll
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.0\FlowServer.pdb
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.0\FlowServer.csproj.CoreCompileInputs.cache
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.0\FlowServer.AssemblyInfo.cs
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.0\FlowServer.dll
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.0\FlowServer.pdb
