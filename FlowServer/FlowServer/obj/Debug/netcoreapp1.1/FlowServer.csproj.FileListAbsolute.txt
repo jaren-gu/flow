@@ -18,3 +18,13 @@ F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.csp
 F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.AssemblyInfo.cs
 F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.dll
 F:\CodeProject\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.pdb
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.deps.json
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.runtimeconfig.json
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.runtimeconfig.dev.json
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.dll
+E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp1.1\FlowServer.pdb
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.csprojResolveAssemblyReference.cache
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.csproj.CoreCompileInputs.cache
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.AssemblyInfo.cs
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.dll
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp1.1\FlowServer.pdb
