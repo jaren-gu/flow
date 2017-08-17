@@ -17,8 +17,11 @@ let view = async (url,next) => {
 
 
 router.get('/', async(ctx) => {
-    let html = await view(ctx.request.url);
-    ctx.body = html;
+    // let html = await view(ctx.request.url);
+    // ctx.body = html;
+    await ctx.render('home/index',{
+
+    })
 })
 
 .get('login', async(ctx) => {
