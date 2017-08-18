@@ -1,44 +1,31 @@
-const Router = require('koa-router');
+const Router = require('koa-router')
+const path = require('path')
+let upload = require('./file')
 
-let fileReader = require('../utils/fileReader');
+let router = new Router()
 
-let router = new Router();
-
-let view = async (url,next) => {
-    // 默认读取 index 
-    if(url.length === 1){
-        url = '/index';
-    }
-
-    let filePath = `./view/home${url}.html`;
-    let html = await fileReader(filePath);
-    return html;
-}
-
-
-router.get('/', async(ctx) => {
-    // let html = await view(ctx.request.url);
-    // ctx.body = html;
-    await ctx.render('home/index',{
-
+router
+    .get('/', async(ctx) => {
+        await ctx.render('home/index', {})
     })
-})
 
-.get('login', async(ctx) => {
-    let html = await view(ctx.request.url);
-    ctx.body = html;
-})
+    .get('login', async(ctx) => {
+        await ctx.render('home/login', {})
+    })
 
-.post('login',async(ctx) => {
-    ctx.body = ctx.request.body;
-})
+    .post('login', async(ctx) => {
+        ctx.body = ctx.request.body
+    })
 
-.get('404', async(ctx) => {
-    ctx.body = '404 page!'
-})
+    .get('upload', async(ctx) => {
+        await ctx.render('home/upload', {})
+    })
 
-.get('helloworld', async(ctx) => {
-    ctx.body = 'helloworld page!'
-})
+    .post('upload', async(ctx) => {
+        let result = await upload(ctx, {
+            path: path.join( path.dirname(__dirname), 'upload')
+        })
+        ctx.body = result
+    })
 
-module.exports = router;
+module.exports = router
