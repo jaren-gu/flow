@@ -30,6 +30,11 @@ function getExtName(filename) {
     return nameList[nameList.length - 1]
 }
 
+/**
+ * 
+ * @param {Object} ctx koa上下文
+ * @param {Object} options 上传参数
+ */
 function uploadFile(ctx, options) {
     let busboy = new Busboy({
         headers: ctx.req.headers

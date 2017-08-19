@@ -4,6 +4,7 @@
   "description": "flow font-end",
   "main": "index.js",
   "scripts": {
+    "start": "node public/index.js",
     "test": "mocha",
     "cover": "istanbul cover node_modules/mocha/bin/_mocha",
     "lint": "eslint index.js"
