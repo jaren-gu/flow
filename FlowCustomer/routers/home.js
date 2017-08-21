@@ -1,14 +1,15 @@
 const Router = require('koa-router')
 const path = require('path')
-let upload = require('../utils/koa/upload')
+const upload = require('../utils/koa/upload')
 
 let router = new Router()
 
-let viewPath = path.join('home')
+let mysql = require('../config/mysql')
 
 router
     //首页
     .get('/', async(ctx) => {
+        mysql.query('select * from user;')
         await ctx.render('home/index', {})
     })
 

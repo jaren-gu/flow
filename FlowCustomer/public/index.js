@@ -4,7 +4,7 @@ const path = require('path')
 const static = require('koa-static')
 const views = require('koa-views')
 
-const router = require('../routers/index')
+const router = require('../config/router')
 
 let app = new Koa()
 
