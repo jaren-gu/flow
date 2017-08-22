@@ -9,35 +9,40 @@ namespace FlowServer.Helper
     public class ConfigHelper
     {
         /// <summary>
-        /// 日志
+        /// 工具
         /// </summary>
-        private static JObject _json;
+        private static ConfigHelper helper;
+        private static JObject json;
 
         /// <summary>
         /// 锁
         /// </summary>
         private static readonly object _lock = new object();
 
-        private ConfigHelper() { }
+        private ConfigHelper()
+        {
+            string s = File.ReadAllText("Config/config.txt");
+            json = JObject.Parse(s);
+        }
 
         /// <summary>
         /// 创建实例
         /// </summary>
         /// <returns></returns>
-        public static JObject GetConfigHelper()
+        public static ConfigHelper GetInstance()
         {
-            if (_json == null)
+            if (helper == null)
             {
                 lock (_lock)
                 {
-                    if (_json == null)
+                    if (helper == null)
                     {
-                        string s = File.ReadAllText("Config/config.txt");
-                        _json = JObject.Parse(s);
+
+                        helper = new ConfigHelper();
                     }
                 }
             }
-            return _json;
+            return helper;
         }
 
         /// <summary>
@@ -45,10 +50,9 @@ namespace FlowServer.Helper
         /// </summary>
         /// <param name="key"></param>
         /// <returns></returns>
-        public static string GetValue(string key)
+        public string GetValue(string key)
         {
-            GetConfigHelper();
-            return _json[key].ToString();
+            return json[key].ToString();
         }
     }
 }

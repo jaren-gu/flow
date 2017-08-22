@@ -12,7 +12,7 @@ namespace FlowServer.Helper
 
         public MySqlDbHelper()
         {
-            string mysql = ConfigHelper.GetValue("MySql");
+            string mysql = ConfigHelper.GetInstance().GetValue("MySql");
             Connection = new MySqlConnection(mysql);
             Connection.Open();
         }

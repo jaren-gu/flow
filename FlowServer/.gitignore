@@ -1,3 +1,5 @@
 FlowServer/.vs/
 FlowServer/FlowServer/bin/
 FlowServer/FlowServer/obj/
+*.suo
+*.log
