@@ -4,18 +4,18 @@ const upload = require('../utils/koa/upload')
 
 let router = new Router()
 
+
 let mysql = require('../config/mysql')
 
 router
     //首页
     .get('/', async(ctx) => {
-        mysql.query('select * from user;')
         await ctx.render('home/index', {})
     })
 
     //关于
-    .get('about',async(ctx) => {
-        await ctx.render('home/about',{})
+    .get('about', async(ctx) => {
+        await ctx.render('home/about', {})
     })
 
     //注册
@@ -46,7 +46,7 @@ router
     //相应上传
     .post('upload', async(ctx) => {
         let result = await upload(ctx, {
-            path: path.join( path.dirname(__dirname), 'upload')
+            path: path.join(path.dirname(__dirname), 'upload')
         })
         ctx.body = result
     })
