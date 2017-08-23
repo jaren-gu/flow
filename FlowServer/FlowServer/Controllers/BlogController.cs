@@ -1,7 +1,6 @@
 ﻿using FlowServer.Helper;
 using FlowServer.Model;
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Bson;
 using MySql.Data.MySqlClient;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
@@ -18,18 +17,8 @@ namespace FlowServer.Controllers
         /// 查询数据
         /// </summary>
         /// <returns></returns>
-        public async Task<string> Select()
+        public async Task<JArray> Select()
         {
-            MongoDBHelper.GetInstance().Connect("Test", "Blog");
-            BsonDocument bson = new BsonDocument
-            {
-                { "Id" , 2.0 },
-                { "Title" , "我要飞lsjflk了！！！" },
-                { "Content" , "这个逗逼要sdlfjljisier 起飞了！！！" }
-            };
-            await MongoDBHelper.GetInstance().InsertOne(bson);
-
-
             using (var mysqlDb = new MySqlDbHelper())
             {
                 var cmd = mysqlDb.Connection.CreateCommand() as MySqlCommand;
@@ -49,9 +38,7 @@ namespace FlowServer.Controllers
                         posts.Add(post);
                     }
                 }
-                string json = JsonConvert.SerializeObject(posts);
-                LogHelper.Info("成功查询到数据:" + json);
-                return json;
+                return JArray.Parse(JsonConvert.SerializeObject(posts));
             }
         }
 
