@@ -19,4 +19,3 @@ E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.AssemblyInfoInp
 E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.AssemblyInfo.cs
 E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.dll
 E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.pdb
-E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.csprojResolveAssemblyReference.cache

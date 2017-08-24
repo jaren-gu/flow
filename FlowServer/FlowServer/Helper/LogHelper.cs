@@ -16,33 +16,37 @@ namespace FlowServer.Helper
         /// 日志
         /// </summary>
         private static ILog _log;
+        private static LogHelper helper;
 
         /// <summary>
         /// 锁
         /// </summary>
         private static readonly object _lock = new object();
 
-        private LogHelper() { }
+        private LogHelper()
+        {
+            ILoggerRepository repository = LogManager.CreateRepository("NETCoreRepository");
+            XmlConfigurator.Configure(repository, new FileInfo("log4net.config"));
+            _log = LogManager.GetLogger(repository.Name, "FlowServer");
+        }
 
         /// <summary>
         /// 创建实例
         /// </summary>
         /// <returns></returns>
-        public static ILog GetLogHelper()
+        public static LogHelper GetLogHelper()
         {
-            if (_log == null)
+            if (helper == null)
             {
                 lock (_lock)
                 {
-                    if (_log == null)
+                    if (helper == null)
                     {
-                        ILoggerRepository repository = LogManager.CreateRepository("NETCoreRepository");
-                        XmlConfigurator.Configure(repository, new FileInfo("log4net.config"));
-                        _log = LogManager.GetLogger(repository.Name, "NETCorelog4net");
+                        helper = new LogHelper();
                     }
                 }
             }
-            return _log;
+            return helper;
         }
 
         private static string GetStackInfo(Exception exception = null)
@@ -67,9 +71,8 @@ namespace FlowServer.Helper
         /// info
         /// </summary>
         /// <param name="msg"></param>
-        public static void Info(object message, Exception exception = null)
+        public void Info(object message, Exception exception = null)
         {
-            GetLogHelper();
             if (exception == null)
                 _log.Info(message + "\r\n" + GetStackInfo());
             else
@@ -80,9 +83,8 @@ namespace FlowServer.Helper
         /// debug
         /// </summary>
         /// <param name="msg"></param>
-        public static void Debug(object message, Exception exception = null)
+        public void Debug(object message, Exception exception = null)
         {
-            GetLogHelper();
             if (exception == null)
                 _log.Debug(message + "\r\n" + GetStackInfo());
             else
@@ -93,9 +95,8 @@ namespace FlowServer.Helper
         /// error
         /// </summary>
         /// <param name="msg"></param>
-        public static void Error(object message, Exception exception = null)
+        public void Error(object message, Exception exception = null)
         {
-            GetLogHelper();
             if (exception == null)
                 _log.Error(message + "\r\n" + GetStackInfo());
             else
@@ -106,9 +107,8 @@ namespace FlowServer.Helper
         /// warn
         /// </summary>
         /// <param name="msg"></param>
-        public static void Warn(object message, Exception exception = null)
+        public void Warn(object message, Exception exception = null)
         {
-            GetLogHelper();
             if (exception == null)
                 _log.Warn(message + "\r\n" + GetStackInfo());
             else

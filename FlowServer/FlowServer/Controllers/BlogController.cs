@@ -52,7 +52,7 @@ namespace FlowServer.Controllers
             byte[] buffer = new byte[HttpContext.Request.ContentLength.Value];
             stream.Read(buffer, 0, buffer.Length);
             string requestStr = Encoding.UTF8.GetString(buffer);
-            LogHelper.Info("接收到的数据：" + requestStr);
+            LogHelper.GetLogHelper().Info("接收到的数据：" + requestStr);
             JObject json = JObject.Parse(requestStr);
             using (var mysqlDb = new MySqlDbHelper())
             {
@@ -63,7 +63,7 @@ namespace FlowServer.Controllers
                 int count = await cmd.ExecuteNonQueryAsync();
                 JObject j = new JObject();
                 j.Add("Count", count);
-                LogHelper.Info("成功插入数据！！");
+                LogHelper.GetLogHelper().Info("成功插入数据！！");
                 return j.ToString();
             }
         }
@@ -78,7 +78,7 @@ namespace FlowServer.Controllers
             byte[] buffer = new byte[HttpContext.Request.ContentLength.Value];
             stream.Read(buffer, 0, buffer.Length);
             string requestStr = Encoding.UTF8.GetString(buffer);
-            LogHelper.Info("接收到的数据：" + requestStr);
+            LogHelper.GetLogHelper().Info("接收到的数据：" + requestStr);
             JObject json = JObject.Parse(requestStr);
             using (var mysqlDb = new MySqlDbHelper())
             {
@@ -89,7 +89,7 @@ namespace FlowServer.Controllers
                 int count = await cmd.ExecuteNonQueryAsync();
                 JObject j = new JObject();
                 j.Add("Count", count);
-                LogHelper.Info("成功更新数据！！！");
+                LogHelper.GetLogHelper().Info("成功更新数据！！！");
                 return j.ToString();
             }
         }
@@ -104,7 +104,7 @@ namespace FlowServer.Controllers
             byte[] buffer = new byte[HttpContext.Request.ContentLength.Value];
             stream.Read(buffer, 0, buffer.Length);
             string requestStr = Encoding.UTF8.GetString(buffer);
-            LogHelper.Info("接收到的数据：" + requestStr);
+            LogHelper.GetLogHelper().Info("接收到的数据：" + requestStr);
             JObject json = JObject.Parse(requestStr);
             using (var mysqlDb = new MySqlDbHelper())
             {
@@ -114,7 +114,7 @@ namespace FlowServer.Controllers
                 int count = await cmd.ExecuteNonQueryAsync();
                 JObject j = new JObject();
                 j.Add("Count", count);
-                LogHelper.Info("成功删除数据！！");
+                LogHelper.GetLogHelper().Info("成功删除数据！！");
                 return j.ToString();
             }
         }
