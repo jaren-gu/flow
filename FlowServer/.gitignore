@@ -1,3 +1,6 @@
-FlowServer/.vs/
+FlowServer/.vs/FlowServer/v15
 FlowServer/FlowServer/bin/
-FlowServer/FlowServer/obj/
+FlowServer/FlowServer/obj/Debug/netcoreapp2.0
+FlowServer/FlowServer/obj
+FlowServer/FlowServer/bin/Debug/netcoreapp2.0
+FlowServer/.vs/FlowServer/v15/sqlite3
