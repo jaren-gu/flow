@@ -1,4 +1,0 @@
-﻿{
-	"MySql": "host=192.168.2.220;port=3306;user id=root;password=lft8306488;database=test;",
-	"MongoDB":"mongodb://192.168.2.220:27017"
-}
