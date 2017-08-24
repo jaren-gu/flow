@@ -14,6 +14,7 @@ E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp2.0\FlowServer.runtimeconfig.j
 E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp2.0\FlowServer.runtimeconfig.dev.json
 E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp2.0\FlowServer.dll
 E:\flow\FlowServer\FlowServer\bin\Debug\netcoreapp2.0\FlowServer.pdb
+E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.csprojResolveAssemblyReference.cache
 E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.csproj.CoreCompileInputs.cache
 E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.AssemblyInfoInputs.cache
 E:\flow\FlowServer\FlowServer\obj\Debug\netcoreapp2.0\FlowServer.AssemblyInfo.cs
