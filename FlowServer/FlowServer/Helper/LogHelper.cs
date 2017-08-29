@@ -1,4 +1,5 @@
-﻿using log4net;
+﻿using FlowServer.Model;
+using log4net;
 using log4net.Config;
 using log4net.Repository;
 using System;
@@ -73,10 +74,20 @@ namespace FlowServer.Helper
         /// <param name="msg"></param>
         public void Info(object message, Exception exception = null)
         {
+            string stackInfoMsg = string.Empty;
+            string exceptionMsg = string.Empty;
             if (exception == null)
-                _log.Info(message + "\r\n" + GetStackInfo());
+            {
+                stackInfoMsg = GetStackInfo();
+                _log.Info(message + "\r\n" + stackInfoMsg);
+            }
             else
+            {
+                exceptionMsg = exception.Message;
                 _log.Info(message, exception);
+            }
+            Flow_Log log = new Flow_Log(message.ToString(), 1, stackInfoMsg, exceptionMsg);
+            log.Save();
         }
 
         /// <summary>
@@ -85,10 +96,20 @@ namespace FlowServer.Helper
         /// <param name="msg"></param>
         public void Debug(object message, Exception exception = null)
         {
+            string stackInfoMsg = string.Empty;
+            string exceptionMsg = string.Empty;
             if (exception == null)
-                _log.Debug(message + "\r\n" + GetStackInfo());
+            {
+                stackInfoMsg = GetStackInfo();
+                _log.Debug(message + "\r\n" + stackInfoMsg);
+            }
             else
+            {
+                exceptionMsg = exception.Message;
                 _log.Debug(message, exception);
+            }
+            Flow_Log log = new Flow_Log(message.ToString(), 2, stackInfoMsg, exceptionMsg);
+            log.Save();
         }
 
         /// <summary>
@@ -97,10 +118,20 @@ namespace FlowServer.Helper
         /// <param name="msg"></param>
         public void Error(object message, Exception exception = null)
         {
+            string stackInfoMsg = string.Empty;
+            string exceptionMsg = string.Empty;
             if (exception == null)
-                _log.Error(message + "\r\n" + GetStackInfo());
+            {
+                stackInfoMsg = GetStackInfo();
+                _log.Error(message + "\r\n" + stackInfoMsg);
+            }
             else
+            {
+                exceptionMsg = exception.Message;
                 _log.Error(message, exception);
+            }
+            Flow_Log log = new Flow_Log(message.ToString(), 3, stackInfoMsg, exceptionMsg);
+            log.Save();
         }
 
         /// <summary>
@@ -109,10 +140,20 @@ namespace FlowServer.Helper
         /// <param name="msg"></param>
         public void Warn(object message, Exception exception = null)
         {
+            string stackInfoMsg = string.Empty;
+            string exceptionMsg = string.Empty;
             if (exception == null)
-                _log.Warn(message + "\r\n" + GetStackInfo());
+            {
+                stackInfoMsg = GetStackInfo();
+                _log.Warn(message + "\r\n" + stackInfoMsg);
+            }
             else
+            {
+                exceptionMsg = exception.Message;
                 _log.Warn(message, exception);
+            }
+            Flow_Log log = new Flow_Log(message.ToString(), 3, stackInfoMsg, exceptionMsg);
+            log.Save();
         }
     }
 }
